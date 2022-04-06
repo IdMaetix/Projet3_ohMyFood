@@ -1,0 +1,59 @@
+// import
+@import "./variables";
+// @import "./keyframe";
+
+// mixins utiles
+@mixin boxShadowTop($colour: #07050521) {
+  box-shadow: inset 0px 5px 20px -2px $colour;
+}
+@mixin boxShadowMenu($colour: $darkGrey) {
+  box-shadow: 0px 5px 20px -2px $colour;
+}
+  
+
+// mixins flexbox
+@mixin flexMid($jc: center, $ai:center) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+}
+@mixin flexCol {
+  @include flexMid();
+  flex-direction: column;
+}
+@mixin flexAround {
+  @include flexMid($jc: space-around);
+}
+@mixin flexBetween {
+  @include flexMid($jc: space-between);
+}
+
+// Balise élément
+@mixin secondTitle {
+  padding-left: 20px;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+// mixins associés au layout
+// header
+@mixin header {
+  @include flexMid;
+  background: $white;
+  height: 70px;
+}
+
+@mixin btn {
+  @include boxShadowMenu();
+  padding: 15px 30px;
+  border: none;
+  border-radius: 20px;
+  background: $gradient;
+  color: $white;
+  cursor: pointer;
+  transition: 1s;
+
+  &:hover {
+    background: lighten($pink, 10);
+  }
+}

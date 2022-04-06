@@ -1,0 +1,36 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+.header-home {
+  @include header;
+}
+
+.sct-home {
+  .paris {
+    @include boxShadowTop;
+    @include header;
+    height: 60px;
+    background: darken($lightGrey, 2);
+
+    i {
+      padding-right: 10px;
+    }
+  }
+  .text {
+    text-align: center;
+    padding-bottom: 30px;
+
+    h2 {
+      @include secondTitle;
+    }
+
+    p {
+      color: lighten(black, 20);
+    }
+
+  }
+}
+
+.btn {
+  @include btn;
+}

@@ -1,0 +1,76 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+@import "../utils/keyframe";
+
+// Import de la police
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&family=Shrikhand&display=swap");
+
+
+/* Effet de scrolling */
+html {
+  scroll-behavior: smooth;
+  
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
+
+// Mordifiacation global
+body,
+::after,
+::before {
+  box-sizing: border-box;
+}
+body {
+  background: $lightGrey;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+h1 {
+  font-family: "Shrikhand", cursive;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: $black;
+}
+
+// Loader au chargement de la page
+.loader {
+  height: 100vh;
+  width: 100%;
+  @include flexMid; 
+  position: fixed;
+  background: linear-gradient(0deg, $mint 0%, rgba(153,226,208,0.6026785714285714) 50%, $mint 100%);
+  z-index: 100;
+  animation: diplayNone 3s linear forwards;
+  transform-origin: right;
+  
+  
+  &::before {
+    content: '';
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right: 5px solid $pink;
+    border-left: 5px solid $purple;
+    border-radius: 50%;
+    animation: loader 1s 3 linear;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    border-top: 5px solid $pink;
+    border-bottom: 5px solid $purple;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    border-radius: 50%;
+    animation: loader 1s 3 linear;
+  }
+}
