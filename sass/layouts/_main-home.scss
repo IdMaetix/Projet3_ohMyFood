@@ -1,0 +1,63 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+// fonctionnement (section)
+.section {
+  width: 100%;
+  background: $white;
+  padding: 20px 0;
+
+  h2 {
+    @include secondTitle;
+  }
+  &__functioning {
+    @include flexAround;
+
+    @media #{$tablette} {
+      flex-direction: column;
+    }
+
+    &--element {
+      width: 28%;
+      border-radius: $radius;
+      margin: 20px 0 20px 0;
+      cursor: pointer;
+      @include boxShadowMenu;
+      @include flexMid($jc: none);
+      position: relative;
+
+      &:hover {
+        background: lighten(#9356dc, 30);
+        transform: scale(1.04);
+      }
+      
+    @media #{$tablette} {
+      width: 85%;
+    }
+      
+    .number {
+      $size: 30px;
+      height: $size;
+      width: $size;
+      border-radius: $radius - 5px;
+      font-size: 20px;
+      color: $white;
+      background: $purple;
+      position: absolute;
+      left: -15px;
+      @include flexMid;
+    }
+
+
+      i {
+        margin: 20px 30px;
+        font-size: 25px;
+        color: lighten($black, 30);
+      }
+      p {
+        color: $black;
+      }
+    }
+  }
+}
+

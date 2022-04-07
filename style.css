@@ -202,4 +202,97 @@ a {
 .btn:hover {
   background: #fface8;
 }
+
+.section {
+  width: 100%;
+  background: #ffffff;
+  padding: 20px 0;
+}
+
+.section h2 {
+  padding-left: 20px;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.section__functioning {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media only screen and (max-width: 992px) {
+  .section__functioning {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.section__functioning--element {
+  width: 28%;
+  border-radius: 20px;
+  margin: 20px 0 20px 0;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 5px 20px -2px #07050554;
+          box-shadow: 0px 5px 20px -2px #07050554;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.section__functioning--element:hover {
+  background: #e4d5f6;
+  -webkit-transform: scale(1.04);
+          transform: scale(1.04);
+}
+
+@media only screen and (max-width: 992px) {
+  .section__functioning--element {
+    width: 85%;
+  }
+}
+
+.section__functioning--element .number {
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+  font-size: 20px;
+  color: #ffffff;
+  background: #9356dc;
+  position: absolute;
+  left: -15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section__functioning--element i {
+  margin: 20px 30px;
+  font-size: 25px;
+  color: #4d4d4d;
+}
+
+.section__functioning--element p {
+  color: #000;
+}
 /*# sourceMappingURL=style.css.map */
