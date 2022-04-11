@@ -1,0 +1,124 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+// @import "../utils/keyframe";
+
+.header-home {
+    position: relative;
+    i {
+        @include retour;
+    }
+}
+.banniere {       
+     height: 50vh;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.main-container {
+    // margin-top: -40px;
+    padding: 30px;
+    border-radius: 50px 50px 0 0;
+    
+    .title-heart {
+        position: relative;
+
+        h1 {
+            font-size: 25px;
+        }
+        &::before{
+            @include heart();
+        }
+        &::after {
+            @include heart($op: 0, $fw: 900);
+            background-image: $gradient;
+            color: transparent;
+        }
+        &:hover::after {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+    }
+    .menu {
+        @include flexBetween;
+        
+        &__section {
+            width: 100%;
+            margin-top: 20px;
+
+            @media #{$desktop} {
+                width: 30%;
+              }
+            h2 {
+                @include titreResto;
+            }
+            .card-menu {
+                $margin: 10px 0;
+                @include flexMid($jc: none, $ai: none);
+                @include boxShadowMenu;
+                border-radius: 20px;
+                height: 75px;
+                margin: 20px 0;
+                background: $white;
+                cursor: pointer;
+                animation: animMenu 2s linear ;
+                overflow: hidden;
+                white-space: nowrap;
+                
+                &:hover .card-menu__check{
+                    margin-right: 0;
+                    i {
+                        animation: loader .4s linear;
+                    }
+                }
+
+                &__text {
+                    margin-left: 10px;
+                    overflow: hidden;
+                    h4,
+                    p {
+                      overflow: hidden;
+                      text-overflow: ellipsis;
+                    }
+                }
+                &__cash {
+                    font-size: 15px;
+                    margin-left: auto;
+                    padding: 20px;
+                    display: flex;
+                    align-items: flex-end;
+                }
+                &__check {
+                    margin-right: -70px;
+                    background: $mint;
+                    color: $mint;
+                    width: 70px;
+                    transition: all .3s linear;
+                    @include flexMid;
+
+                    i {
+                        @include flexMid;
+                        width: 25px;
+                        height: 25px;
+                        background: $white;
+                        border-radius: 50%;
+                    }
+                }
+
+            }
+                
+            .carte-fantome {
+                height: 105px;
+                
+            }
+            
+        }
+
+    }
+}
+
+.btn-mid {
+    @include flexMid;
+}

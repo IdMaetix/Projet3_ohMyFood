@@ -51,9 +51,79 @@
   background: $gradient;
   color: $white;
   cursor: pointer;
-  transition: 1s;
 
   &:hover {
-    background: lighten($pink, 10);
+    background: lighten($pink, 1);
   }
 }
+
+// before new
+@mixin new($colour: $mint, $size: 30px) {
+  content: 'Nouveau';
+  height: $size;
+  width: 80px;
+  top: 15px;
+  right: $size;
+  @include flexMid();
+  position: absolute;
+  background: $colour;
+  color: darken($colour, 40);
+}
+
+// Coeur pour like
+
+@mixin heart ($position: 3%, $op: 1, $fw: 400) {
+  content: '\f004';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: $fw;
+  font-size: 40px;
+  position: absolute;
+  top: $position;
+  right: $position;
+  color: $darkGrey;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: $op;
+  transition: all .3s linear;
+
+}
+
+// Restaurants
+
+// fleche retour
+@mixin retour($size: 50px) {
+     position: absolute;
+     font-size: $size - 25px;
+     height: $size;
+     width: $size;
+    left: 3%;
+    top: 10%;
+    @include flexMid();
+    border-radius: 25%;
+
+    &:hover {
+      @include boxShadowMenu();
+      font-size: $size - 20px;
+    }
+   
+}
+
+// Entrée + Plat + Désserts 
+@mixin titreResto($colour: lighten($black, 30)) {
+  color: $colour;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+  position: relative;
+  font-weight: 400;
+
+  &::after {
+    content: '';
+    position: absolute;
+    height: 5px;
+    width: 50px;
+    background: $mint;
+    bottom: 10px;
+    left: 0;
+  }
+}
+

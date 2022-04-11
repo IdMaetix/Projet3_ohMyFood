@@ -1,0 +1,17 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+// Footer
+.margin-footer {
+  background: lighten($black, 20);
+  padding: 20px 30px;
+  color: $white;
+
+  h1 {
+  letter-spacing: 2px;
+  font-family: "Shrikhand", cursive;
+  }
+  p {
+    margin: 10px 0;
+  }
+}

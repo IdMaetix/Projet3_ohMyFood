@@ -10,15 +10,17 @@
   h2 {
     @include secondTitle;
   }
+  
   &__functioning {
     @include flexAround;
+    flex-direction: column;
 
-    @media #{$tablette} {
-      flex-direction: column;
+    @media #{$desktop} {
+      flex-direction: row;
     }
 
     &--element {
-      width: 28%;
+      width: 85%;
       border-radius: $radius;
       margin: 20px 0 20px 0;
       cursor: pointer;
@@ -31,8 +33,8 @@
         transform: scale(1.04);
       }
       
-    @media #{$tablette} {
-      width: 85%;
+    @media #{$desktop} {
+      width: 28%;
     }
       
     .number {
@@ -61,3 +63,82 @@
   }
 }
 
+// h2 restaurant
+.title-resto {
+  margin-left: 10px
+}
+// Présentation des restaurants (article)
+.menu {
+    @include flexAround;
+    flex-wrap: wrap;
+    flex-direction: column;
+    
+    @media #{$desktop} {
+        flex-direction: row;
+    }
+  
+    &__card {
+      width: 95%;
+      margin-bottom: 25px;
+      border-radius: 20px;
+      @include boxShadowMenu;
+      background: $white;
+      position: relative;
+      
+      @media #{$desktop} {
+        width: 47%;
+      }
+  
+      &--img {
+        height: 150px;
+        width: 100%;
+        border-radius: $radius $radius 0 0;
+  
+        img {
+        border-radius: $radius $radius 0 0;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+  
+        @media #{$desktop} {
+          height: 200px;
+        }
+      }
+  
+      &--new {
+        position: relative;
+        &::before {
+          @include new;
+        }
+      }
+  
+      &--text {
+        padding: 0 20px;
+        position: relative;
+      
+        // coeurs
+        &::before{
+          @include heart();
+        } 
+        &::after {
+            @include heart($op: 0, $fw: 900);
+            background-image: $gradient;
+            color: transparent;
+        }
+        &:hover::after {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+
+        h3 {
+          margin-bottom: 5px;
+        }
+        p {
+          margin-top: 10px;
+        }
+      }
+  
+    }
+  }
+  

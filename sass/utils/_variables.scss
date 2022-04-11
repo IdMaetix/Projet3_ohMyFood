@@ -13,5 +13,5 @@ $gradient: linear-gradient($pink, $purple);
 $radius: 20px;
 
 // @media screen 
-$tablette: "only screen and (max-width: 992px)";
-$mobile: "only screen and (max-width: 767px)";
+$desktop: "only screen and (min-width: 992px)";
+$tablette: "only screen and (min-width: 767px)";
