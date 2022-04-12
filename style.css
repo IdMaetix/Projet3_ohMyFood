@@ -81,6 +81,11 @@ h1 {
 
 h3 {
   margin: 10px 0;
+  font-size: 16px;
+}
+
+p {
+  font-size: 13px;
 }
 
 a {
@@ -368,7 +373,7 @@ span {
 
 @media only screen and (min-width: 992px) {
   .menu__card--img {
-    height: 200px;
+    height: 225px;
   }
 }
 
@@ -506,8 +511,14 @@ span {
 }
 
 .main-container {
-  padding: 30px;
+  padding: 20px;
   border-radius: 50px 50px 0 0;
+}
+
+@media only screen and (min-width: 992px) {
+  .main-container {
+    padding: 40px;
+  }
 }
 
 .main-container .title-heart {
@@ -671,6 +682,8 @@ span {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .main-container .menu__section .card-menu__check i {

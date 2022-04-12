@@ -1,6 +1,5 @@
 @import "../utils/variables";
-@import "../utils/mixins";
-// @import "../utils/keyframe";
+// @import "../utils/mixins";
 
 .header-home {
     position: relative;
@@ -18,10 +17,16 @@
 }
 
 .main-container {
+    // bg text
+    // background: #1234;
     // margin-top: -40px;
-    padding: 30px;
+    
+    padding: 20px;
     border-radius: 50px 50px 0 0;
     
+    @media #{$desktop} {
+        padding: 40px;
+      }
     .title-heart {
         position: relative;
 
@@ -58,7 +63,7 @@
                 $margin: 10px 0;
                 @include flexMid($jc: none, $ai: none);
                 @include boxShadowMenu;
-                border-radius: 20px;
+                border-radius: $radius;
                 height: 75px;
                 margin: 20px 0;
                 background: $white;
@@ -97,6 +102,7 @@
                     width: 70px;
                     transition: all .3s linear;
                     @include flexMid;
+                    flex-shrink: 0;
 
                     i {
                         @include flexMid;

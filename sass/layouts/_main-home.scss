@@ -80,7 +80,7 @@
     &__card {
       width: 95%;
       margin-bottom: 25px;
-      border-radius: 20px;
+      border-radius: $radius;
       @include boxShadowMenu;
       background: $white;
       position: relative;
@@ -102,7 +102,7 @@
         }
   
         @media #{$desktop} {
-          height: 200px;
+          height: 225px;
         }
       }
   
