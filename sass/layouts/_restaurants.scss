@@ -43,7 +43,8 @@
         }
         &:hover::after {
             opacity: 1;
-            transform: scale(1.1);
+            cursor: pointer;
+            transform: scale(1.1)
         }
     }
     .menu {
@@ -60,12 +61,12 @@
                 @include titreResto;
             }
             .card-menu {
-                $margin: 10px 0;
+                $margin: 20px;
                 @include flexMid($jc: none, $ai: none);
                 @include boxShadowMenu;
                 border-radius: $radius;
                 height: 75px;
-                margin: 20px 0;
+                margin: $margin 0;
                 background: $white;
                 cursor: pointer;
                 animation: animMenu 2s linear ;
@@ -80,16 +81,16 @@
                 }
 
                 &__text {
-                    margin-left: 10px;
+                    margin-left: $margin - 10px;
                     overflow: hidden;
-                    h4,
+                    h3,
                     p {
                       overflow: hidden;
                       text-overflow: ellipsis;
                     }
                 }
                 &__cash {
-                    font-size: 15px;
+                    font-size: 16px;
                     margin-left: auto;
                     padding: 20px;
                     display: flex;

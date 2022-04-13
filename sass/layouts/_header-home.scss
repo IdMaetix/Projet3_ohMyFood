@@ -10,7 +10,9 @@
     @include boxShadowTop;
     @include header;
     height: 60px;
-    background: darken($lightGrey, 2);
+    background: darken($lightGrey, 1);
+    color: #414141;
+
 
     i {
       padding-right: 10px;
@@ -26,6 +28,8 @@
 
     p {
       color: lighten(black, 20);
+      font-size: 16px;
+      color: $darkGrey;
     }
 
   }

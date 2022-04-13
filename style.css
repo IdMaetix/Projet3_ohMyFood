@@ -81,11 +81,11 @@ h1 {
 
 h3 {
   margin: 10px 0;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 p {
-  font-size: 13px;
+  font-size: 16px;
 }
 
 a {
@@ -158,12 +158,12 @@ span {
       -ms-flex-align: center;
           align-items: center;
   background: #ffffff;
-  height: 70px;
+  height: 60px;
 }
 
 .sct-home .paris {
-  -webkit-box-shadow: inset 0px 5px 20px -2px #07050521;
-          box-shadow: inset 0px 5px 20px -2px #07050521;
+  -webkit-box-shadow: inset 0px 2px 10px -2px #414141;
+          box-shadow: inset 0px 2px 10px -2px #414141;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -174,9 +174,10 @@ span {
       -ms-flex-align: center;
           align-items: center;
   background: #ffffff;
-  height: 70px;
   height: 60px;
-  background: #eeeeee;
+  height: 60px;
+  background: #f0f0f0;
+  color: #414141;
 }
 
 .sct-home .paris i {
@@ -190,24 +191,30 @@ span {
 
 .sct-home .text h2 {
   padding-left: 20px;
-  font-size: 25px;
+  margin-top: 30px;
+  font-size: 23px;
   font-weight: 600;
 }
 
 .sct-home .text p {
   color: #333333;
+  font-size: 16px;
+  color: #414141;
 }
 
 .btn {
-  -webkit-box-shadow: 0px 5px 20px -2px #07050554;
-          box-shadow: 0px 5px 20px -2px #07050554;
-  padding: 15px 30px;
+  -webkit-box-shadow: 0px 5px 10px -2px #414141;
+          box-shadow: 0px 5px 10px -2px #414141;
+  padding: 15px 40px;
+  margin: 20px auto;
+  margin-bottom: 30px;
   border: none;
   border-radius: 20px;
   background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
   background: linear-gradient(#ff79da, #9356dc);
   color: #ffffff;
   cursor: pointer;
+  font-size: 15px;
 }
 
 .btn:hover {
@@ -222,7 +229,8 @@ span {
 
 .section h2 {
   padding-left: 20px;
-  font-size: 25px;
+  margin-top: 30px;
+  font-size: 23px;
   font-weight: 600;
 }
 
@@ -239,6 +247,8 @@ span {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-bottom: 30px;
+  color: #414141;
 }
 
 @media only screen and (min-width: 992px) {
@@ -255,8 +265,8 @@ span {
   border-radius: 20px;
   margin: 20px 0 20px 0;
   cursor: pointer;
-  -webkit-box-shadow: 0px 5px 20px -2px #07050554;
-          box-shadow: 0px 5px 20px -2px #07050554;
+  -webkit-box-shadow: 0px 5px 10px -2px #414141;
+          box-shadow: 0px 5px 10px -2px #414141;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -273,6 +283,14 @@ span {
   background: #e4d5f6;
   -webkit-transform: scale(1.04);
           transform: scale(1.04);
+}
+
+.section__functioning--element:hover i {
+  color: #9356dc;
+}
+
+.section__functioning--element:hover p {
+  color: #000;
 }
 
 @media only screen and (min-width: 992px) {
@@ -304,15 +322,11 @@ span {
 .section__functioning--element i {
   margin: 20px 30px;
   font-size: 25px;
-  color: #4d4d4d;
-}
-
-.section__functioning--element p {
-  color: #000;
 }
 
 .title-resto {
   margin-left: 10px;
+  padding-top: 20px;
 }
 
 .menu {
@@ -345,8 +359,8 @@ span {
   width: 95%;
   margin-bottom: 25px;
   border-radius: 20px;
-  -webkit-box-shadow: 0px 5px 20px -2px #07050554;
-          box-shadow: 0px 5px 20px -2px #07050554;
+  -webkit-box-shadow: 0px 5px 10px -2px #414141;
+          box-shadow: 0px 5px 10px -2px #414141;
   background: #ffffff;
   position: relative;
 }
@@ -358,7 +372,7 @@ span {
 }
 
 .menu__card--img {
-  height: 150px;
+  height: 200px;
   width: 100%;
   border-radius: 20px 20px 0 0;
 }
@@ -410,11 +424,11 @@ span {
   content: '\f004';
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
-  font-size: 40px;
+  font-size: 30px;
   position: absolute;
-  top: 3%;
+  top: 0;
   right: 3%;
-  color: #07050554;
+  color: #414141;
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 1;
@@ -426,11 +440,11 @@ span {
   content: '\f004';
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
-  font-size: 40px;
+  font-size: 30px;
   position: absolute;
-  top: 3%;
+  top: 0;
   right: 3%;
-  color: #07050554;
+  color: #414141;
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
@@ -457,13 +471,18 @@ span {
 
 .margin-footer {
   background: #333333;
-  padding: 20px 30px;
+  padding: 20px;
   color: #ffffff;
 }
 
 .margin-footer h1 {
+  font-size: 25px;
   letter-spacing: 2px;
   font-family: "Shrikhand", cursive;
+}
+
+.margin-footer i {
+  margin-right: 10px;
 }
 
 .margin-footer p {
@@ -494,8 +513,8 @@ span {
 }
 
 .header-home i:hover {
-  -webkit-box-shadow: 0px 5px 20px -2px #07050554;
-          box-shadow: 0px 5px 20px -2px #07050554;
+  -webkit-box-shadow: 0px 5px 10px -2px #414141;
+          box-shadow: 0px 5px 10px -2px #414141;
   font-size: 30px;
 }
 
@@ -533,11 +552,11 @@ span {
   content: '\f004';
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
-  font-size: 40px;
+  font-size: 30px;
   position: absolute;
-  top: 3%;
+  top: 0;
   right: 3%;
-  color: #07050554;
+  color: #414141;
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 1;
@@ -549,11 +568,11 @@ span {
   content: '\f004';
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
-  font-size: 40px;
+  font-size: 30px;
   position: absolute;
-  top: 3%;
+  top: 0;
   right: 3%;
-  color: #07050554;
+  color: #414141;
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
@@ -566,6 +585,7 @@ span {
 
 .main-container .title-heart:hover::after {
   opacity: 1;
+  cursor: pointer;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
@@ -621,8 +641,8 @@ span {
   -webkit-box-align: none;
       -ms-flex-align: none;
           align-items: none;
-  -webkit-box-shadow: 0px 5px 20px -2px #07050554;
-          box-shadow: 0px 5px 20px -2px #07050554;
+  -webkit-box-shadow: 0px 5px 10px -2px #414141;
+          box-shadow: 0px 5px 10px -2px #414141;
   border-radius: 20px;
   height: 75px;
   margin: 20px 0;
@@ -648,14 +668,14 @@ span {
   overflow: hidden;
 }
 
-.main-container .menu__section .card-menu__text h4,
+.main-container .menu__section .card-menu__text h3,
 .main-container .menu__section .card-menu__text p {
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .main-container .menu__section .card-menu__cash {
-  font-size: 15px;
+  font-size: 16px;
   margin-left: auto;
   padding: 20px;
   display: -webkit-box;

@@ -4,12 +4,16 @@
 // Footer
 .margin-footer {
   background: lighten($black, 20);
-  padding: 20px 30px;
+  padding: 20px;
   color: $white;
 
   h1 {
-  letter-spacing: 2px;
-  font-family: "Shrikhand", cursive;
+    font-size: 25px;
+    letter-spacing: 2px;
+    font-family: "Shrikhand", cursive;
+  }
+  i {
+    margin-right: 10px; 
   }
   p {
     margin: 10px 0;

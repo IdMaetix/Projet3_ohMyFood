@@ -14,6 +14,8 @@
   &__functioning {
     @include flexAround;
     flex-direction: column;
+    margin-bottom: 30px;
+    color: $darkGrey;
 
     @media #{$desktop} {
       flex-direction: row;
@@ -31,6 +33,12 @@
       &:hover {
         background: lighten(#9356dc, 30);
         transform: scale(1.04);
+      }
+      &:hover i {
+        color: $purple;
+      }
+      &:hover p {
+        color: $black;
       }
       
     @media #{$desktop} {
@@ -54,10 +62,6 @@
       i {
         margin: 20px 30px;
         font-size: 25px;
-        color: lighten($black, 30);
-      }
-      p {
-        color: $black;
       }
     }
   }
@@ -65,7 +69,8 @@
 
 // h2 restaurant
 .title-resto {
-  margin-left: 10px
+  margin-left: 10px;
+  padding-top: 20px;
 }
 // Présentation des restaurants (article)
 .menu {
@@ -90,12 +95,12 @@
       }
   
       &--img {
-        height: 150px;
+        height: 200px;
         width: 100%;
         border-radius: $radius $radius 0 0;
   
         img {
-        border-radius: $radius $radius 0 0;
+          border-radius: $radius $radius 0 0;
           height: 100%;
           width: 100%;
           object-fit: cover;
