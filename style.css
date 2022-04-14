@@ -426,7 +426,7 @@ span {
   font-weight: 400;
   font-size: 30px;
   position: absolute;
-  top: 0;
+  top: 15%;
   right: 3%;
   color: #414141;
   background-clip: text;
@@ -442,7 +442,7 @@ span {
   font-weight: 900;
   font-size: 30px;
   position: absolute;
-  top: 0;
+  top: 15%;
   right: 3%;
   color: #414141;
   background-clip: text;
@@ -518,18 +518,17 @@ span {
   font-size: 30px;
 }
 
-.banniere {
-  height: 50vh;
-}
-
-.banniere img {
+img {
   width: 100%;
-  height: 100%;
+  height: 60vh;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 .main-container {
+  background-color: #f6f6f6;
+  position: relative;
+  margin-top: -60px;
   padding: 20px;
   border-radius: 50px 50px 0 0;
 }
@@ -554,7 +553,7 @@ span {
   font-weight: 400;
   font-size: 30px;
   position: absolute;
-  top: 0;
+  top: 15%;
   right: 3%;
   color: #414141;
   background-clip: text;
@@ -570,7 +569,7 @@ span {
   font-weight: 900;
   font-size: 30px;
   position: absolute;
-  top: 0;
+  top: 15%;
   right: 3%;
   color: #414141;
   background-clip: text;
@@ -723,7 +722,14 @@ span {
 }
 
 .main-container .menu__section .carte-fantome {
-  height: 105px;
+  display: none;
+}
+
+@media only screen and (min-width: 992px) {
+  .main-container .menu__section .carte-fantome {
+    display: block;
+    height: 100px;
+  }
 }
 
 .btn-mid {

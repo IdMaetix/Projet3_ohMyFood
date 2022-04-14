@@ -20,7 +20,7 @@
   }
   .text {
     text-align: center;
-    padding-bottom: 30px;
+    padding-bottom: $padding + 10px;
 
     h2 {
       @include secondTitle;
