@@ -483,6 +483,8 @@ span {
 
 .margin-footer i {
   margin-right: 10px;
+  width: 15px;
+  height: 20px;
 }
 
 .margin-footer p {
@@ -520,7 +522,7 @@ span {
 
 img {
   width: 100%;
-  height: 60vh;
+  height: 50vh;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -671,6 +673,10 @@ img {
 .main-container .menu__section .card-menu__text p {
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.main-container .menu__section .card-menu__text p {
+  color: #414141;
 }
 
 .main-container .menu__section .card-menu__cash {
