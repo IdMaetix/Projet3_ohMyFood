@@ -491,6 +491,10 @@ span {
   margin: 10px 0;
 }
 
+.margin-footer p a {
+  color: #ffffff;
+}
+
 .header-home {
   position: relative;
 }
