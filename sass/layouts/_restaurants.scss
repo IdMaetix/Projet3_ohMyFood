@@ -63,7 +63,7 @@
             // carte de menu
             .card-menu {
                 $margin: 20px;
-                @include flexMid($jc: none, $ai: none);
+                @include flexMid($jc: left, $ai: start);
                 @include boxShadowMenu;
                 border-radius: $radius;
                 height: 75px;
