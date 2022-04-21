@@ -639,9 +639,9 @@ img {
   -webkit-box-pack: left;
       -ms-flex-pack: left;
           justify-content: left;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   -webkit-box-shadow: 0px 5px 10px -2px #414141;
           box-shadow: 0px 5px 10px -2px #414141;
   border-radius: 20px;
