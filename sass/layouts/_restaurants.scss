@@ -49,6 +49,7 @@
     // enssemnle des menus
     .menu {
         @include flexBetween;
+        margin: 0;
         
         &__section {
             width: 100%;

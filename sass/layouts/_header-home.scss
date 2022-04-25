@@ -12,6 +12,7 @@
     height: 60px;
     background: darken($lightGrey, 1);
     color: #414141;
+    font-weight: 400;
 
 
     i {
@@ -27,9 +28,9 @@
     }
 
     p {
-      color: lighten(black, 20);
-      font-size: 16px;
-      color: $darkGrey;
+      color: lighten($black, 0);
+      font-size: 19px;
+      font-weight: lighter;
     }
 
   }

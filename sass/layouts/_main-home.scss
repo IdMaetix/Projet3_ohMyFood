@@ -16,6 +16,11 @@
     flex-direction: column;
     margin-bottom: 30px;
     color: $darkGrey;
+    p {
+      font-size: 16px;
+      color: $black;
+      font-weight: 575;
+    }
 
     @media #{$desktop} {
       flex-direction: row;
@@ -24,10 +29,11 @@
     &--element {
       width: 85%;
       border-radius: $radius;
-      margin: 20px 0 20px 0;
+      margin: 15px 0;
       cursor: pointer;
       @include boxShadowMenu;
       @include flexMid($jc: left);
+      background: $lightGrey;
       position: relative;
 
       &:hover {
@@ -37,20 +43,17 @@
       &:hover i {
         color: $purple;
       }
-      &:hover p {
-        color: $black;
-      }
       
     @media #{$desktop} {
       width: 28%;
     }
       
     .number {
-      $size: 30px;
+      $size: 25px;
       height: $size;
       width: $size;
       border-radius: $radius - 5px;
-      font-size: 20px;
+      font-size: 16px;
       color: $white;
       background: $purple;
       position: absolute;
@@ -61,7 +64,7 @@
 
       i {
         margin: 20px 30px;
-        font-size: 25px;
+        font-size: 20px;
       }
     }
   }
@@ -69,7 +72,7 @@
 
 // h2 restaurant
 .title-resto {
-  margin-left: 10px;
+  margin-left: 25px;
   padding-top: 20px;
 }
 // Présentation des restaurants (article)
@@ -77,6 +80,7 @@
     @include flexAround;
     flex-wrap: wrap;
     flex-direction: column;
+    margin: 0 15px;
     
     @media #{$desktop} {
         flex-direction: row;

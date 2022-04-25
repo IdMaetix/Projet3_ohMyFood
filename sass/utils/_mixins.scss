@@ -6,7 +6,7 @@
   box-shadow: inset 0px 2px 10px -2px $darkGrey;
 }
 @mixin boxShadowMenu() {
-  box-shadow: 0px 5px 10px -2px $darkGrey;
+  box-shadow: 0px 5px 10px -2px darken(#f3f3f3, 10);
 }
   
 
@@ -121,7 +121,7 @@
   &::after {
     content: '';
     position: absolute;
-    height: 5px;
+    height: 4px;
     width: 50px;
     background: $mint;
     bottom: 10px;
