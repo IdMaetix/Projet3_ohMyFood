@@ -36,6 +36,11 @@
       background: $lightGrey;
       position: relative;
 
+      i {
+        margin: 20px 30px;
+        font-size: 20px;
+        color: lighten(#414141, 20);
+      }
       &:hover {
         background: lighten(#9356dc, 30);
         transform: scale(1.04);
@@ -62,10 +67,6 @@
     }
 
 
-      i {
-        margin: 20px 30px;
-        font-size: 20px;
-      }
     }
   }
 }
@@ -145,6 +146,7 @@
         }
         p {
           margin-top: 10px;
+          color: #414141;
         }
       }
   
