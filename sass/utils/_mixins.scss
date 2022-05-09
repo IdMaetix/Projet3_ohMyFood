@@ -3,26 +3,30 @@
 
 // mixins utiles
 @mixin boxShadowTop() {
-  box-shadow: inset 0px 2px 10px -2px $darkGrey;
+  box-shadow: inset 0px 2px 5px -2px $darkGrey;
 }
+
 @mixin boxShadowMenu() {
   box-shadow: 0px 5px 10px -2px darken(#f3f3f3, 10);
 }
-  
+
 
 // mixins flexbox
-@mixin flexMid($jc: center, $ai:center) {
+@mixin flexMid($jc: center, $ai: center) {
   display: flex;
   justify-content: $jc;
   align-items: $ai;
 }
+
 @mixin flexCol {
   @include flexMid();
   flex-direction: column;
 }
+
 @mixin flexAround {
   @include flexMid($jc: space-around);
 }
+
 @mixin flexBetween {
   @include flexMid($jc: space-between);
 }
@@ -96,20 +100,20 @@
 
 // fleche retour
 @mixin retour($size: 50px) {
-     position: absolute;
-     font-size: $size - 25px;
-     height: $size;
-     width: $size;
-    left: 3%;
-    top: 10%;
-    @include flexMid();
-    border-radius: 25%;
+  position: absolute;
+  font-size: $size - 25px;
+  height: $size;
+  width: $size;
+  left: 3%;
+  top: 10%;
+  @include flexMid();
+  border-radius: 25%;
 
-    &:hover {
-      @include boxShadowMenu();
-      font-size: $size - 20px;
-    }
-   
+  &:hover {
+    @include boxShadowMenu();
+    font-size: $size - 20px;
+  }
+
 }
 
 // Entrée + Plat + Désserts 
@@ -119,6 +123,7 @@
   text-transform: uppercase;
   position: relative;
   font-weight: 400;
+  font-size: 22px;
 
   &::after {
     content: '';
@@ -130,4 +135,3 @@
     left: 0;
   }
 }
-

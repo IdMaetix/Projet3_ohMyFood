@@ -10,12 +10,14 @@
   h2 {
     @include secondTitle;
   }
-  
+
   &__functioning {
     @include flexAround;
     flex-direction: column;
     margin-bottom: 30px;
+    margin-left: 12px;
     color: $darkGrey;
+
     p {
       font-size: 16px;
       color: $black;
@@ -27,9 +29,9 @@
     }
 
     &--element {
-      width: 85%;
+      width: 86%;
       border-radius: $radius;
-      margin: 15px 0;
+      margin: 15px;
       cursor: pointer;
       @include boxShadowMenu;
       @include flexMid($jc: left);
@@ -41,30 +43,32 @@
         font-size: 20px;
         color: lighten(#414141, 20);
       }
+
       &:hover {
         background: lighten(#9356dc, 30);
         transform: scale(1.04);
       }
+
       &:hover i {
         color: $purple;
       }
-      
-    @media #{$desktop} {
-      width: 28%;
-    }
-      
-    .number {
-      $size: 25px;
-      height: $size;
-      width: $size;
-      border-radius: $radius - 5px;
-      font-size: 16px;
-      color: $white;
-      background: $purple;
-      position: absolute;
-      left: -15px;
-      @include flexMid;
-    }
+
+      @media #{$desktop} {
+        width: 28%;
+      }
+
+      .number {
+        $size: 25px;
+        height: $size;
+        width: $size;
+        border-radius: $radius - 5px;
+        font-size: 16px;
+        color: $white;
+        background: $purple;
+        position: absolute;
+        left: -15px;
+        @include flexMid;
+      }
 
 
     }
@@ -76,80 +80,84 @@
   margin-left: 25px;
   padding-top: 20px;
 }
+
 // Présentation des restaurants (article)
 .menu {
-    @include flexAround;
-    flex-wrap: wrap;
-    flex-direction: column;
-    margin: 0 15px;
-    
-    @media #{$desktop} {
-        flex-direction: row;
-    }
-  
-    &__card {
-      width: 95%;
-      margin-bottom: 25px;
-      border-radius: $radius;
-      @include boxShadowMenu;
-      background: $white;
-      position: relative;
-      
-      @media #{$desktop} {
-        width: 47%;
-      }
-  
-      &--img {
-        height: 200px;
-        width: 100%;
-        border-radius: $radius $radius 0 0;
-  
-        img {
-          border-radius: $radius $radius 0 0;
-          height: 100%;
-          width: 100%;
-          object-fit: cover;
-        }
-  
-        @media #{$desktop} {
-          height: 225px;
-        }
-      }
-  
-      &--new {
-        position: relative;
-        &::before {
-          @include new;
-        }
-      }
-  
-      &--text {
-        padding: 0 20px;
-        position: relative;
-      
-        // coeurs
-        &::before{
-          @include heart();
-        } 
-        &::after {
-            @include heart($op: 0, $fw: 900);
-            background-image: $gradient;
-            color: transparent;
-        }
-        &:hover::after {
-            opacity: 1;
-            transform: scale(1.1);
-        }
+  @include flexAround;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: 0 15px;
 
-        h3 {
-          margin-bottom: 5px;
-        }
-        p {
-          margin-top: 10px;
-          color: #414141;
-        }
-      }
-  
-    }
+  @media #{$desktop} {
+    flex-direction: row;
   }
-  
+
+  &__card {
+    width: 95%;
+    margin-bottom: 25px;
+    border-radius: $radius;
+    @include boxShadowMenu;
+    background: $white;
+    position: relative;
+
+    @media #{$desktop} {
+      width: 47%;
+    }
+
+    &--img {
+      height: 200px;
+      width: 100%;
+      border-radius: $radius $radius 0 0;
+
+      img {
+        border-radius: $radius $radius 0 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      @media #{$desktop} {
+        height: 225px;
+      }
+    }
+
+    &--new {
+      position: relative;
+
+      &::before {
+        @include new;
+      }
+    }
+
+    &--text {
+      padding: 0 20px;
+      position: relative;
+
+      // coeurs
+      &::before {
+        @include heart();
+      }
+
+      &::after {
+        @include heart($op: 0, $fw: 900);
+        background-image: $gradient;
+        color: transparent;
+      }
+
+      &:hover::after {
+        opacity: 1;
+        transform: scale(1.1);
+      }
+
+      h3 {
+        margin-bottom: 5px;
+      }
+
+      p {
+        margin-top: 10px;
+        color: #414141;
+      }
+    }
+
+  }
+}

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&family=Shrikhand&display=swap");
 @-webkit-keyframes loader {
   0% {
     -webkit-transform: rotate(0deg);
@@ -188,8 +188,8 @@ span {
 }
 
 .sct-home .paris {
-  -webkit-box-shadow: inset 0px 2px 10px -2px #414141;
-          box-shadow: inset 0px 2px 10px -2px #414141;
+  -webkit-box-shadow: inset 0px 2px 5px -2px #414141;
+          box-shadow: inset 0px 2px 5px -2px #414141;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -202,9 +202,9 @@ span {
   background: #ffffff;
   height: 60px;
   height: 60px;
-  background: #f0f0f0;
+  background: #e6e6e6;
   color: #414141;
-  font-weight: 400;
+  font-weight: 200;
 }
 
 .sct-home .paris i {
@@ -226,7 +226,7 @@ span {
 .sct-home .text p {
   color: #666666;
   font-size: 19px;
-  font-weight: bold;
+  font-weight: 400;
 }
 
 .btn {
@@ -279,6 +279,7 @@ span {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-bottom: 30px;
+  margin-left: 12px;
   color: #414141;
 }
 
@@ -298,9 +299,9 @@ span {
 }
 
 .section__functioning--element {
-  width: 85%;
+  width: 86%;
   border-radius: 20px;
-  margin: 15px 0;
+  margin: 15px;
   cursor: pointer;
   -webkit-box-shadow: 0px 5px 10px -2px #dadada;
           box-shadow: 0px 5px 10px -2px #dadada;
@@ -511,6 +512,13 @@ span {
   padding: 0 20px 20px 25px;
   color: #ffffff;
   margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .margin-footer h1 {
@@ -527,12 +535,9 @@ span {
   height: 20px;
 }
 
-.margin-footer p {
-  margin: 10px 0;
-}
-
-.margin-footer p a {
+.margin-footer a {
   color: #ffffff;
+  margin: 5px 0;
 }
 
 .header-home {
@@ -585,15 +590,15 @@ img {
   }
 }
 
-.main-container .title-heart {
+.main-container .title {
   position: relative;
 }
 
-.main-container .title-heart h1 {
+.main-container .title h1 {
   font-size: 25px;
 }
 
-.main-container .title-heart::before {
+.main-container .title__heart::before {
   content: '\f004';
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
@@ -609,7 +614,7 @@ img {
   transition: all .3s linear;
 }
 
-.main-container .title-heart::after {
+.main-container .title__heart::after {
   content: '\f004';
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
@@ -628,7 +633,7 @@ img {
   color: transparent;
 }
 
-.main-container .title-heart:hover::after {
+.main-container .title__heart:hover::after {
   opacity: 1;
   cursor: pointer;
   -webkit-transform: scale(1.1);
@@ -665,6 +670,7 @@ img {
   text-transform: uppercase;
   position: relative;
   font-weight: 400;
+  font-size: 22px;
 }
 
 .main-container .menu__section h2::after {

@@ -3,64 +3,75 @@
 // Header avec titre et icon retour
 .header-home {
     position: relative;
+
     i {
         @include retour;
     }
 }
+
 // banière de fond
-    img {
-        width: 100%;
-        height: 50vh;
-        object-fit: cover;
-    }
+img {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+}
 
 .main-container {
     background-color: #f6f6f6;
     position: relative;
     margin-top: -60px;
-    
+
     padding: 20px;
     border-radius: 50px 50px 0 0;
-    
+
     @media #{$desktop} {
         padding: 40px;
-      }
-    .title-heart {
+    }
+
+    .title {
         position: relative;
 
         h1 {
             font-size: 25px;
         }
-        &::before{
-            @include heart();
-        }
-        &::after {
-            @include heart($op: 0, $fw: 900);
-            background-image: $gradient;
-            color: transparent;
-        }
-        &:hover::after {
-            opacity: 1;
-            cursor: pointer;
-            transform: scale(1.1)
+
+        &__heart {
+
+            &::before {
+                @include heart();
+            }
+
+            &::after {
+                @include heart($op: 0, $fw: 900);
+                background-image: $gradient;
+                color: transparent;
+            }
+
+            &:hover::after {
+                opacity: 1;
+                cursor: pointer;
+                transform: scale(1.1)
+            }
         }
     }
-    
+
     // enssemnle des menus
     .menu {
         @include flexBetween;
         margin: 0;
-        
+
         &__section {
             width: 100%;
             margin-top: 20px;
 
             @media #{$desktop} {
                 width: 30%;
-              }
+            }
+
             h2 {
                 @include titreResto;
             }
+
             // carte de menu
             .card-menu {
                 $margin: 20px;
@@ -71,13 +82,14 @@
                 margin: $margin 0;
                 background: $white;
                 cursor: pointer;
-                animation: animMenu 2s linear ;
+                animation: animMenu 2s linear;
                 overflow: hidden;
                 white-space: nowrap;
-                
+
                 // animation icon check
-                &:hover .card-menu__check{
+                &:hover .card-menu__check {
                     margin-right: 0;
+
                     i {
                         animation: loader .4s linear;
                     }
@@ -87,15 +99,18 @@
                 &__text {
                     margin-left: $margin - 10px;
                     overflow: hidden;
+
                     h3,
                     p {
-                      overflow: hidden;
-                      text-overflow: ellipsis;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
                     }
+
                     p {
                         color: $darkGrey;
                     }
                 }
+
                 &__cash {
                     font-size: 16px;
                     margin-left: auto;
@@ -103,6 +118,7 @@
                     display: flex;
                     align-items: flex-end;
                 }
+
                 &__check {
                     margin-right: -70px;
                     background: $mint;
@@ -122,17 +138,18 @@
                 }
 
             }
-                
+
             // carte invisible pour la version desktop
             .carte-fantome {
                 display: none;
 
                 @media #{$desktop} {
                     display: block;
-                    height: 100px;;
+                    height: 100px;
+                    ;
                 }
             }
-            
+
         }
 
     }

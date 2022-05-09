@@ -10,15 +10,16 @@
     @include boxShadowTop;
     @include header;
     height: 60px;
-    background: darken($lightGrey, 1);
+    background: darken($lightGrey, 5);
     color: #414141;
-    font-weight: 400;
+    font-weight: 200;
 
 
     i {
       padding-right: 10px;
     }
   }
+
   .text {
     text-align: center;
     padding-bottom: $padding + 10px;
@@ -30,7 +31,7 @@
     p {
       color: lighten($black, 40);
       font-size: 19px;
-      font-weight: bold;
+      font-weight: 400;
     }
 
   }
