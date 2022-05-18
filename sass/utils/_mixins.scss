@@ -33,7 +33,7 @@
 
 // Balise élément
 @mixin secondTitle {
-  padding-left: 20px;
+  // padding-left: 20px;
   margin-top: 30px;
   font-size: 23px;
   font-weight: 600;
@@ -45,19 +45,24 @@
   @include flexMid;
   background: $white;
   height: 60px;
+  h1 {
+    font-size: 30px;
+    letter-spacing: 1.5px
+  }
 }
 
-@mixin btn {
+@mixin btn ($padding: 15px 40px){
   @include boxShadowMenu();
-  padding: 15px 40px;
+  padding: $padding;
   margin: 20px auto;
   margin-bottom: 30px;
   border: none;
-  border-radius: 20px;
+  border-radius: 25px;
   background: $gradient;
   color: $white;
   cursor: pointer;
   font-size: 15px;
+  font-weight: 500;
   box-shadow: 0px 5px 10px -2px darken(#f3f3f3, 20);
 
   &:hover {
@@ -73,6 +78,8 @@
   width: 80px;
   top: 15px;
   right: $size;
+  font-size: 14px;
+  font-weight: 600;
   @include flexMid();
   position: absolute;
   background: $colour;
@@ -119,19 +126,19 @@
 // Entrée + Plat + Désserts 
 @mixin titreResto($colour: lighten($black, 30)) {
   color: $colour;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   text-transform: uppercase;
   position: relative;
   font-weight: 400;
-  font-size: 22px;
+  font-size: 18px;
 
   &::after {
     content: '';
     position: absolute;
-    height: 4px;
+    height: 3px;
     width: 50px;
     background: $mint;
-    bottom: 10px;
+    bottom: 0px;
     left: 0;
   }
 }
